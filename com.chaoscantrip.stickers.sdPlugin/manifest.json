@@ -18,6 +18,20 @@
 					"TitleAlignment": "middle"
 				}
 			]
+		},
+		{
+			"Name": "Copy Sticker",
+			"UUID": "com.chaoscantrip.stickers.copy-sticker",
+			"Tooltip": "Copies the image to clipboard.",
+			"PropertyInspectorPath": "ui/copy-sticker.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"TitleAlignment": "middle"
+				}
+			]
 		}
 	],
 	"Category": "Stickers [ChaosCantrip]",
