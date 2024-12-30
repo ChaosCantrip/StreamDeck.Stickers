@@ -1,9 +1,17 @@
-import { action, DidReceiveSettingsEvent, KeyDownEvent, SingletonAction } from "@elgato/streamdeck";
+import { action, DidReceiveSettingsEvent, KeyDownEvent, SingletonAction, WillAppearEvent } from "@elgato/streamdeck";
 import { execSync } from "child_process";
 
 
 @action({ UUID: "com.chaoscantrip.stickers.copy-sticker" })
 export class CopySticker extends SingletonAction<CopyStickerSettings> {
+
+    override async onWillAppear(ev: WillAppearEvent<CopyStickerSettings>): Promise<void> {
+        const { settings } = ev.payload;
+
+        if (settings.image_file) {
+            await ev.action.setImage(settings.image_file);
+        }
+    }
 
     override async onDidReceiveSettings(ev: DidReceiveSettingsEvent<CopyStickerSettings>): Promise<void> {
         const { settings } = ev.payload;
