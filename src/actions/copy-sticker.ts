@@ -4,7 +4,7 @@ import { action, DidReceiveSettingsEvent, KeyDownEvent, SingletonAction } from "
 @action({ UUID: "com.chaoscantrip.stickers.copy-sticker" })
 export class CopySticker extends SingletonAction<CopyStickerSettings> {
 
-    override onDidReceiveSettings(ev: DidReceiveSettingsEvent<CopyStickerSettings>): Promise<void> | void {
+    override async onDidReceiveSettings(ev: DidReceiveSettingsEvent<CopyStickerSettings>): Promise<void> {
         // Set Image as sticker
     }
     
