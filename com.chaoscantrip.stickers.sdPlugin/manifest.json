@@ -4,22 +4,6 @@
 	"Author": "ChaosCantrip",
 	"Actions": [
 		{
-			"Name": "Counter",
-			"UUID": "com.chaoscantrip.stickers.increment",
-			"Icon": "imgs/actions/counter/icon",
-			"Tooltip": "Displays a count, which increments by one on press.",
-			"PropertyInspectorPath": "ui/increment-counter.html",
-			"Controllers": [
-				"Keypad"
-			],
-			"States": [
-				{
-					"Image": "imgs/actions/counter/key",
-					"TitleAlignment": "middle"
-				}
-			]
-		},
-		{
 			"Name": "Copy Sticker",
 			"UUID": "com.chaoscantrip.stickers.copy-sticker",
 			"Tooltip": "Copies the image to clipboard.",
@@ -35,7 +19,6 @@
 		}
 	],
 	"Category": "Stickers [ChaosCantrip]",
-	"CategoryIcon": "imgs/plugin/category-icon",
 	"CodePath": "bin/plugin.js",
 	"Description": "This is a plugin to copy stickers to your clipboard.",
 	"Icon": "imgs/plugin/marketplace",
