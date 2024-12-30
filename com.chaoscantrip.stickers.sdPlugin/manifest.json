@@ -6,7 +6,7 @@
 		{
 			"Name": "Copy Sticker",
 			"UUID": "com.chaoscantrip.stickers.copy-sticker",
-			"Icon": "imgs/actions/sticker/sticker",
+			"Icon": "imgs/actions/copy-sticker/icon",
 			"Tooltip": "Copies the image to clipboard.",
 			"PropertyInspectorPath": "ui/copy-sticker.html",
 			"Controllers": [
@@ -20,10 +20,10 @@
 		}
 	],
 	"Category": "Stickers [ChaosCantrip]",
-	"CategoryIcon": "imgs/actions/sticker/sticker",
+	"CategoryIcon": "imgs/plugin/category-icon",
 	"CodePath": "bin/plugin.js",
 	"Description": "This is a plugin to copy stickers to your clipboard.",
-	"Icon": "imgs/actions/sticker/sticker",
+	"Icon": "imgs/plugin/marketplace-icon",
 	"SDKVersion": 2,
 	"Software": {
 		"MinimumVersion": "6.4"
