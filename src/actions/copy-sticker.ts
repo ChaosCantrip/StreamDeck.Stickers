@@ -15,11 +15,17 @@ export class CopySticker extends SingletonAction<CopyStickerSettings> {
         const { settings } = ev.payload;
 
         if (!settings.image_file) {
-            // Handle missing image file.
+            await ev.action.showAlert();
             return;
         }
 
-        execSync(`nircmd clipboard copyimage "${settings.image_file}"`);
+        try {
+            execSync(`nircmd clipboard copyimage "${settings.image_file}"`);
+            await ev.action.showOk();
+        } catch (error) {
+            await ev.action.showAlert();
+        }
+        
     }
 }
 
