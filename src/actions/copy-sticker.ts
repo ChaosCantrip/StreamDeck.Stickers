@@ -5,7 +5,9 @@ import { action, DidReceiveSettingsEvent, KeyDownEvent, SingletonAction } from "
 export class CopySticker extends SingletonAction<CopyStickerSettings> {
 
     override async onDidReceiveSettings(ev: DidReceiveSettingsEvent<CopyStickerSettings>): Promise<void> {
-        // Set Image as sticker
+        const { settings } = ev.payload;
+
+        await ev.action.setImage(settings.image_file);
     }
     
     override async onKeyDown(ev: KeyDownEvent<CopyStickerSettings>): Promise<void> {
@@ -15,5 +17,5 @@ export class CopySticker extends SingletonAction<CopyStickerSettings> {
 
 
 type CopyStickerSettings = {
-    file?: string;
+    image_file?: string;
 };
