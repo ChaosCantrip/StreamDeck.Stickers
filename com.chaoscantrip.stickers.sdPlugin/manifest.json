@@ -20,7 +20,7 @@
 			]
 		}
 	],
-	"Category": "Stickers [ChaosCantrip]",
+	"Category": "Stickers",
 	"CategoryIcon": "imgs/plugin/category-icon",
 	"CodePath": "bin/plugin.js",
 	"Description": "This is a plugin to copy stickers to your clipboard.",
