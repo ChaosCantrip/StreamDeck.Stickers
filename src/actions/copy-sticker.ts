@@ -1,4 +1,5 @@
 import { action, DidReceiveSettingsEvent, KeyDownEvent, SingletonAction } from "@elgato/streamdeck";
+import { execSync } from "child_process";
 
 
 @action({ UUID: "com.chaoscantrip.stickers.copy-sticker" })
@@ -11,7 +12,14 @@ export class CopySticker extends SingletonAction<CopyStickerSettings> {
     }
     
     override async onKeyDown(ev: KeyDownEvent<CopyStickerSettings>): Promise<void> {
-        // Copy sticker to clipboard
+        const { settings } = ev.payload;
+
+        if (!settings.image_file) {
+            // Handle missing image file.
+            return;
+        }
+
+        execSync(`nircmd clipboard copyimage "${settings.image_file}"`);
     }
 }
 
