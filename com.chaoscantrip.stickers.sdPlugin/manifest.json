@@ -23,7 +23,7 @@
 	"CategoryIcon": "imgs/actions/sticker/sticker",
 	"CodePath": "bin/plugin.js",
 	"Description": "This is a plugin to copy stickers to your clipboard.",
-	"Icon": "imgs/plugin/marketplace",
+	"Icon": "imgs/actions/sticker/sticker",
 	"SDKVersion": 2,
 	"Software": {
 		"MinimumVersion": "6.4"
