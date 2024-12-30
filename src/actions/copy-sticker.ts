@@ -8,7 +8,9 @@ export class CopySticker extends SingletonAction<CopyStickerSettings> {
     override async onDidReceiveSettings(ev: DidReceiveSettingsEvent<CopyStickerSettings>): Promise<void> {
         const { settings } = ev.payload;
 
-        await ev.action.setImage(settings.image_file);
+        if (settings.image_file) {
+            await ev.action.setImage(settings.image_file);
+        }
     }
     
     override async onKeyDown(ev: KeyDownEvent<CopyStickerSettings>): Promise<void> {
